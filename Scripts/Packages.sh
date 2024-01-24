@@ -30,8 +30,7 @@ UPDATE_PACKAGE "argon-config" "jerrykuku/luci-app-argon-config" "master"
 UPDATE_PACKAGE "passwall" "xiaorouji/openwrt-passwall" "main"
 UPDATE_PACKAGE "passwall2" "xiaorouji/openwrt-passwall2" "main"
 UPDATE_PACKAGE "passwall-packages" "xiaorouji/openwrt-passwall-packages" "main"
-UPDATE_PACKAGE "helloworld" "fw876/helloworld" "master"
-UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev"
+
 
 #更新软件包版本
 UPDATE_VERSION() {
@@ -54,4 +53,4 @@ UPDATE_VERSION() {
 	fi
 }
 
-UPDATE_VERSION "sing-box" "1.8.2" "0d9b947817e33d8a965c1367f623cd3b8dc415282f9e4d658efd2573d9fd7cc1"
+
