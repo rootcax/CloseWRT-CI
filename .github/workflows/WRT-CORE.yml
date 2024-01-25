@@ -130,6 +130,9 @@ jobs:
           cd ./wrt/
 
           ./scripts/feeds update -a
+          ./scripts/feeds update packages
+          rm -rf feeds/packages/lang/golang
+          svn co https://github.com/openwrt/packages/tree/openwrt-22.03/lang/golang feeds/packages/lang/golang
           ./scripts/feeds install -a
 
       - name: Custom Packages
@@ -137,7 +140,7 @@ jobs:
           cd ./wrt/package/
 
           $GITHUB_WORKSPACE/Scripts/Packages.sh
-          $GITHUB_WORKSPACE/Scripts/Handles.sh
+
 
       - name: Custom Settings
         run: |
