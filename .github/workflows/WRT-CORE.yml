@@ -131,10 +131,10 @@ jobs:
 
           ./scripts/feeds update -a
           ./scripts/feeds update packages
-          git clone -b master --single-branch https://github.com/immortalwrt/packages.git packages_master
-          rm -rf ./feeds/packages/lang/golang
-          mv ./packages_master/lang/golang ./feeds/packages/lang
-          rm -rf ./packages_master
+		  wget https://github.com/upx/upx/releases/download/v3.96/upx-3.96-amd64_linux.tar.xz
+          tar -Jxf upx-3.96-amd64_linux.tar.xz
+          chmod +x ./upx-3.96-amd64_linux/upx
+          cp ./upx-3.96-amd64_linux/upx staging_dir/host/bin
           ./scripts/feeds install -a
 
       - name: Custom Packages
