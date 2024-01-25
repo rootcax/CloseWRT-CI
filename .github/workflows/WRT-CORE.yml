@@ -207,7 +207,7 @@ jobs:
           tag_name: ${{env.WRT_TARGET}}_${{env.WRT_SOURCE}}_${{env.WRT_DATE}}
           files: ./wrt/upload/*.*
           body: |
-            这是个平台固件包，内含多个设备！
+            这是个平台固件包，内单个设备！
             请注意选择你需要的设备固件！
             不要问，更就完事了！
 
